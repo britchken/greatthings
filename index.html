@@ -1,6 +1,7 @@
-<div class='a'><img src="ok.png" style="width:100px;height:100px"></div>
+<div class='a' onclick="done()"><img src="ok.png" style="width:100px;height:100px"></div>
+<div class='a' onclick="done()"><img src="ok.png" style="width:100px;height:100px"></div>
 
-<p></p>
+<p id="sinker" align="center" style="font-size:40px">sdf</p>
 
 <head>
     <link rel="stylesheet" type="text/css" href="looks.css">
@@ -13,8 +14,26 @@
 </head>
 <body>
     <script>
+    var quotes = ["this", "that", "the other"];
+    var links = ["http://www.google.com", "facebook.com", "gmail.com"];
+    value = Math.floor(Math.random() * quotes.length);
+
+
+    function clickMe() {
+        var el = document.getElementById("sinker");
+        el.innerHTML = "<a href='" + links[value] + "'>" + quotes[value] + "</a>";
+
+        value = value + 1;
+        if (value == quotes.length){
+            value = 0;
+        }
+    }
+
     $(document).ready(function(){
-        animateDivStart();   
+        letsGo();   
+    });
+    $( '.a').click(function(){
+        clickMe();
     });
     </script>
 </body>
