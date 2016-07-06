@@ -1,5 +1,5 @@
-<div class='a' onclick="done()"><img src="ok.png" style="width:100px;height:100px"></div>
-<div class='a' onclick="done()"><img src="ok.png" style="width:100px;height:100px"></div>
+<div class='a' onclick="clickMe(0)"><img src="jells.gif" style="width:100px;height:100px"></div>
+<div class='a' onclick="clickMe()"><img src="jells.gif" style="width:100px;height:100px"></div>
 
 <p id="sinker" align="center" style="font-size:40px">sdf</p>
 
@@ -19,9 +19,9 @@
     value = Math.floor(Math.random() * quotes.length);
 
 
-    function clickMe() {
+    function clickMe(gg) {
         var el = document.getElementById("sinker");
-        el.innerHTML = "<a href='" + links[value] + "'>" + quotes[value] + "</a>";
+        el.innerHTML = "<a href='" + links[gg] + "'>" + quotes[gg] + "</a>";
 
         value = value + 1;
         if (value == quotes.length){
@@ -30,11 +30,15 @@
     }
 
     $(document).ready(function(){
-        letsGo();   
+        animateDivStart();   
     });
     $( '.a').click(function(){
         clickMe();
     });
+
     </script>
 </body>
 
+http://www.benknowscode.com/2012/09/animating-multiple-elements_1805.html
+
+http://bseth99.github.io/projects/animate/4-animate-multiple.html
