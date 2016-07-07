@@ -1,3 +1,4 @@
+<div onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
@@ -28,13 +29,66 @@
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
-
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
 
 <div class="wrapper">
     <button align="center" onclick="animateDiv()">Be Free!!</button>
+    </br>
+    <font color="white">
+    <a id="sinker" style="font-size:80px"></a>
+</font>
+
 </div>
 
-<p id="sinker" align="center" style="font-size:40px">sdf</p>
+
 
 <head>
     <link rel="stylesheet" type="text/css" href="looks.css">
@@ -57,21 +111,11 @@ var y = [];
 var t = [];
 var newx = [];
 var newy = [];
-var numJellies = 30;
+var numJellies = 80;
 
-    var quotes = ["this", "that", "the other"];
-    var links = ["http://www.google.com", "facebook.com", "gmail.com"];
-    value = Math.floor(Math.random() * quotes.length);
-    
-    
     function clickMe() {
         var el = document.getElementById("sinker");
-        el.innerHTML = "<a href='" + links[value] + "'>" + quotes[value] + "</a>";
-
-        value = value + 1;
-        if (value == quotes.length){
-            value = 0;
-        }
+        el.innerHTML = "You found the king jelly!!!";
     }
 
     $(document).ready(function(){
@@ -81,7 +125,7 @@ var numJellies = 30;
 function animateDiv(){
     
     for (i = 0; i < numJellies; i = i + 1) {
-        if (x[i] > w - 100 || x[i] < 100 || y[i] > h - 100 || y[i] < 100) {
+        if (x[i] > w - 140 || x[i] < 140 || y[i] > h - 140 || y[i] < 140) {
             t[i] = t[i] + .5;
         } else {
             if (Math.random() > .5) {
@@ -99,7 +143,7 @@ function animateDiv(){
     //document.write("okddddd");
     $('.jell').each(function(index, jell){
 
-    $(jell).delay(index*15).animate({
+    $(jell).delay(index*5).animate({
         rotate: t[index]*180/Math.PI+90
     }, 200);
     $(jell).animate({

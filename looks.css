@@ -2,8 +2,8 @@ div.jell{
 width: 100px;
 height:100px;
 position:fixed;
-left: 45%;
-top: 45%;
+left: calc(50% - 43px);
+top: calc(50% - 50px);
 }
 
 .wrapper {
