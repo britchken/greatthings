@@ -1,27 +1,13 @@
-var xxspeed;
-var yyspeed;
+var xspeed;
+var yspeed;
 var h;
 var w;
-var xx;
-var yx;
-var tt;
+var x[];
+var y;
+var t;
+var newx;
+var newy;
 
-function makeNewPosition(x, y, xspeed, yspeed, theta){
-
-    if (x > w - 100 || x < 100 || y > h - 100 || y < 100) {
-        theta = theta + .6;
-    } else {
-        if (Math.random() > .5) {
-            theta = theta + .3;
-        } else {
-            theta = theta - .3;
-        }
-    }
-    var nh = y + xspeed * Math.sin(theta);
-    var nw = x + yspeed * Math.cos(theta);
-
-    return [nh,nw, theta];    
-}
 
 function done() {
     alert("Your jelly has been going for a while!");
@@ -29,32 +15,46 @@ function done() {
 
 
 function animateDiv(x, y, xspeed, yspeed, theta){
-    var oldq = $('.a').offset();
-    var newq = makeNewPosition(oldq.left, oldq.top, theta);
+    for (i = 0; i < 10; i = i + 1) {
+        if (x[i] > w - 100 || x[i] < 100 || y[i] > h - 100 || y[i] < 100) {
+            t[i] = t[i] + .6;
+        } else {
+            if (Math.random() > .5) {
+                t[i] = t[i] + .3;
+            } else {
+                t[i] = t[i] - .3;
+            }
+        }
+        newx[i] = x[i] + xspeed[i] * Math.sin(t[i]);
+        newy[i] = x[i] + yspeed[i] * Math.cos(t[i]);
+    }
 
 
-    $(that).animate({rotate: newq[2]/Math.PI*180 + 91}, 350);
-    $(that).animate({ top: newq[0], left: newq[1]}, 800, "easeInOutBack", function(){
-      animateDiv(that);        
+
+    $('.a').each(function (idx, a)
+    {
+        $(a).animate({left: newx[idx], top: newy}, 100);
     });
-
 };
 
 function animateDivStart() {
     h = $(window).height() - 50;
     w = $(window).width() - 50;
+
     for (i = 0; i < 10; i = i + 1) {
-	xx[i] = Math.floor(Math.random()*w);
-	yy[i] = Math.floor(Math.random()*h);
-	theta[i] = 2*Math.random()*Math.PI;
-	yyspeed[i] = Math.floor(Math.random()*200);
-        xxspeed[i] = Math.floor(Math.random()*200);
-	}
+        document.write(x);
+    	x[i] = Math.floor(Math.random()*w);
+        document.write("yoo");
+    	y[i] = Math.floor(Math.random()*h);
+        document.write("yoo");
+    	t[i] = 2*Math.random()*Math.PI;
+        document.write("yoo");
+    	yspeed[i] = Math.floor(Math.random()*200);
+        xspeed[i] = Math.floor(Math.random()*200);
+        document.write("yoo");
+    }
     
-    $('.a').each(function (idx, a)
-	{
-	$(a).animateDiv({left: xx[idx].x, top: ep[idx].y}, 800, "easeInOutBack", 
-    
+    animateDiv();
 }
 
 

@@ -1,5 +1,38 @@
-<div class='a' onclick="clickMe(0)"><img src="jells.gif" style="width:100px;height:100px"></div>
-<div class='a' onclick="clickMe()"><img src="jells.gif" style="width:100px;height:100px"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'><img src="jellyy.png"></div>
+
+
+<div class="wrapper">
+    <button align="center" onclick="animateDiv()">Be Free!!</button>
+</div>
 
 <p id="sinker" align="center" style="font-size:40px">sdf</p>
 
@@ -9,19 +42,31 @@
     <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="jquery-css-transform.js"></script>
     <script type="text/javascript" src="jquery-animate-css-rotate-scale.js"></script>    
-        <script type="text/javascript" src="jquery.easing.1.3.js"></script>    
+    <script type="text/javascript" src="jquery.easing.1.3.js"></script>    
 
 </head>
 <body>
-    <script>
+
+<script>
+
+var speed = [];
+var h;
+var w;
+var x = [];
+var y = [];
+var t = [];
+var newx = [];
+var newy = [];
+var numJellies = 30;
+
     var quotes = ["this", "that", "the other"];
     var links = ["http://www.google.com", "facebook.com", "gmail.com"];
     value = Math.floor(Math.random() * quotes.length);
-
-
-    function clickMe(gg) {
+    
+    
+    function clickMe() {
         var el = document.getElementById("sinker");
-        el.innerHTML = "<a href='" + links[gg] + "'>" + quotes[gg] + "</a>";
+        el.innerHTML = "<a href='" + links[value] + "'>" + quotes[value] + "</a>";
 
         value = value + 1;
         if (value == quotes.length){
@@ -32,13 +77,53 @@
     $(document).ready(function(){
         animateDivStart();   
     });
-    $( '.a').click(function(){
-        clickMe();
+
+function animateDiv(){
+    
+    for (i = 0; i < numJellies; i = i + 1) {
+        if (x[i] > w - 100 || x[i] < 100 || y[i] > h - 100 || y[i] < 100) {
+            t[i] = t[i] + .5;
+        } else {
+            if (Math.random() > .5) {
+                t[i] = t[i] + .3;
+            } else {
+                t[i] = t[i] - .3;
+            }
+        }
+        newx[i] = x[i] + Math.floor (speed[i] * Math.cos( t[i] ));
+        newy[i] = y[i] + Math.floor (speed[i] * Math.sin( t[i] ));
+        x[i] = newx[i];
+        y[i] = newy[i];
+    }
+    
+    //document.write("okddddd");
+    $('.jell').each(function(index, jell){
+
+    $(jell).delay(index*15).animate({
+        rotate: t[index]*180/Math.PI+90
+    }, 200);
+    $(jell).animate({
+        left: newx[index],
+        top: newy[index]
+    }, 500, "easeInOutBack");
     });
+
+animateDiv();
+
+};
+
+function animateDivStart() {
+
+    h = $(window).height() - 50;
+    w = $(window).width() - 50;
+
+    for (i = 0; i < numJellies; i = i + 1) {
+        x[i] = Math.floor(w/2);
+        y[i] = Math.floor(h/2);
+        t[i] = 2*Math.random()*Math.PI;
+        speed[i] = Math.random()*100+20;
+    }
+}
 
     </script>
 </body>
-
-http://www.benknowscode.com/2012/09/animating-multiple-elements_1805.html
-
-http://bseth99.github.io/projects/animate/4-animate-multiple.html

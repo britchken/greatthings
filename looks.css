@@ -1,11 +1,18 @@
-div.a{
+div.jell{
 width: 100px;
 height:100px;
 position:fixed;
-left: 300px;
-top: 300px;
+left: 45%;
+top: 45%;
 }
 
+.wrapper {
+	text-align: center;
+}
+
+.button {
+	position: absolute;
+}
 body {
 	background-color: #28287a;
 }
