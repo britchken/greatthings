@@ -58,29 +58,9 @@
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
 
 <div class="wrapper">
-    <button align="center" onclick="animateDiv()">Be Free!!</button>
+    <button align="center" onclick="this.style.visibility= 'hidden'; animateDiv();">Be Free!!</button>
     </br>
     <font color="white">
     <a id="sinker" style="font-size:80px"></a>
@@ -111,7 +91,7 @@ var y = [];
 var t = [];
 var newx = [];
 var newy = [];
-var numJellies = 80;
+var numJellies = 60;
 
     function clickMe() {
         var el = document.getElementById("sinker");
@@ -149,7 +129,7 @@ function animateDiv(){
     $(jell).animate({
         left: newx[index],
         top: newy[index]
-    }, 500, "easeInOutBack");
+    }, 400, "easeInOutBack");
     });
 
 animateDiv();
