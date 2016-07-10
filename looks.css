@@ -4,6 +4,7 @@ height:100px;
 position:absolute;
 left: calc(50% - 43px);
 top: 120%;
+z-index: 5;
 }
 
 .wrapper {
