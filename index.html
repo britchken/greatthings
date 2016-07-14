@@ -67,9 +67,7 @@ function getFriends() {
 
     FB.api('/me/picture?width=200&height=200', function(here) {
                   if (here && !here.error) {
-                      var src = document.getElementById("pic");
-                      src.appendChild(here.data.url);
-                      console.log(here.data.width);
+                      console.log(here.data.url);
                     }
                 });
 /*
