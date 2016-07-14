@@ -46,7 +46,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      getFriends();
+      testAPI();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -61,19 +61,6 @@
 
 
   }
-
-
-function getFriends() {
-
-    FB.api('/me?fields=email', function(response) {
-        if(response && !response.error) {
-          document.getElementById('status').innerHTML =
-          'Thanks for logging in, ' + response.email + '!';
-    });
-
-}
-
-
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
@@ -124,10 +111,10 @@ function getFriends() {
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+    FB.api('/me?fields=email', function(response) {
+      console.log('Successful login for: ' + response.email);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';
+        'Thanks for logging in, ' + response.email + '!';
     });
   }
 </script>
