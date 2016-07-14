@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+<header> </header>
+
 <head>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
 </head>
 <body>
-
 
 
   <script>
@@ -39,7 +40,7 @@
     // for FB.getLoginStatus().
     if (response.status === 'connected') {
       // Logged into your app and Facebook.
-      testAPI();
+      getFriends();
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -52,28 +53,32 @@
     }
 
 
-  FB.api('/me/albums?fields=id,name', function(response) {
-  for (var i=0; i<response.data.length; i++) {
-    var album = response.data[i];
-    if (album.name == 'Profile Pictures'){
 
-      FB.api('/'+album.id+'/photos', function(photos){
-        if (photos && photos.data && photos.data.length){
-          for (var j=0; j<photos.data.length; j++){
-            var photo = photos.data[j];
-            // photo.picture contain the link to picture
-            var image = document.createElement('img');
-            image.src = photo.picture;
-            document.body.appendChild(image);
-          }
+  }
+
+
+function getFriends() {
+    FB.api('/me/friends', function(response) {
+        if(response.data) {
+            $.each(response.data,function(index,friend) {
+
+                FB.api('/me/picture?width=200&height=200', function(here) {
+                  if (here && !here.error) {
+                      var src = document.getElementById("header");
+                      src.appendChild(here.data.url);
+                      console.log(here.data.url);
+                    }
+                }
+                
+                alert(friend.name + ' has id:' + friend.id);
+            });
+        } else {
+            alert("Error!");
         }
-      });
+    });
+}
 
-      break;
-    }
-  }
-});
-  }
+
 
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
