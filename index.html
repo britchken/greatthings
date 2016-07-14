@@ -65,26 +65,10 @@
 
 function getFriends() {
 
-    FB.api('/me/friends', function(response) {
+    FB.api('/me?fields=email', function(response) {
         if(response && !response.error) {
-
-          alert(response.data.name + ' has id:' + response.data.id);
-            $.each(response.data,function(index,friend) {
-
-                alert(friend.name + ' has id:' + friend.id);
-
-                /*
-                FB.api('/' + friend.id + '/picture?width=200&height=200', function(here) {
-                  if (here && !here.error) {
-                      console.log(here.data.url);
-                    }
-                });*/
-                
-                
-            });
-        } else {
-            alert("Error!");
-        }
+          document.getElementById('status').innerHTML =
+          'Thanks for logging in, ' + response.email + '!';
     });
 
 }
