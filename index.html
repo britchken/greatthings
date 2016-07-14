@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
-<header> </header>
 
 <head>
 <title>Facebook Login JavaScript Example</title>
 <meta charset="UTF-8">
 </head>
 <body>
+
+<div id="pic">
+</div>
 
     <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="jquery-css-transform.js"></script>
@@ -65,7 +67,7 @@ function getFriends() {
 
     FB.api('/me/picture?width=200&height=200', function(here) {
                   if (here && !here.error) {
-                      var src = document.getElementById("header");
+                      var src = document.getElementById("pic");
                       src.appendChild(here.data.url);
                       console.log(here.data.url);
                     }
@@ -78,7 +80,7 @@ function getFriends() {
 
                 FB.api('/' + response.data + '/picture?width=200&height=200', function(here) {
                   if (here && !here.error) {
-                      var src = document.getElementById("header");
+                      var src = document.getElementById("pic");
                       src.appendChild(here.data.url);
                       console.log(here.data.url);
                     }
