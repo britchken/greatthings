@@ -70,11 +70,13 @@ function getFriends() {
             $.each(response.data,function(index,friend) {
 
                 alert(friend.name + ' has id:' + friend.id);
+
+                /*
                 FB.api('/' + friend.id + '/picture?width=200&height=200', function(here) {
                   if (here && !here.error) {
                       console.log(here.data.url);
                     }
-                });
+                });*/
                 
                 
             });
