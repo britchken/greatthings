@@ -65,8 +65,8 @@
 
 function getFriends() {
 
-    FB.api('/me/user_friends', function(response) {
-        if(response.data) {
+    FB.api('/me/friends', function(response) {
+        if(response && !response.error) {
 
           alert(response.data.name + ' has id:' + response.data.id);
             $.each(response.data,function(index,friend) {
