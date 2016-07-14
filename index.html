@@ -69,10 +69,10 @@ function getFriends() {
                   if (here && !here.error) {
                       var src = document.getElementById("pic");
                       src.appendChild(here.data.url);
-                      console.log(here.data.url);
+                      console.log(here.data.width);
                     }
                 });
-
+/*
 
     FB.api('/me/friends', function(response) {
         if(response.data) {
@@ -92,6 +92,8 @@ function getFriends() {
             alert("Error!");
         }
     });
+
+*/
 }
 
 
