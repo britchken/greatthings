@@ -5,6 +5,11 @@ position:absolute;
 left: calc(50% - 43px);
 top: 120%;
 z-index: 5;
+user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+-o-user-select: none;
 }
 
 .wrapper {
