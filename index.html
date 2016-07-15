@@ -126,28 +126,17 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
-        console.log(profile);
         $('#profile').empty();
         $('#profile').append(
             $('<p><img src=\"' + profile.image.url + '\"></p>'));
         $('#profile').append(
             $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
             profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
-        if (profile.emails) {
-          $('#profile').append('<br/>Emails: ');
-          for (var i=0; i < profile.emails.length; i++){
-            $('#profile').append(profile.emails[i].value).append(' ');
-          }
           $('#profile').append('<br/>');
-        }
-        if (profile.cover && profile.coverPhoto) {
-          $('#profile').append(
-              $('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
         }
       }, function(err) {
         var error = err.result;
         $('#profile').empty();
-        $('#profile').append(error.message);
       });
     }
   };
@@ -155,7 +144,7 @@ var helper = (function() {
 
 /**
  * jQuery initialization
- */
+
 $(document).ready(function() {
   $('#disconnect').click(helper.disconnect);
   $('#loaderror').hide();
@@ -167,7 +156,7 @@ $(document).ready(function() {
     );
   }
 });
-
+ */
 /**
  * Handler for when the sign-in state changes.
  *
