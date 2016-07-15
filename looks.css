@@ -12,6 +12,12 @@ user-select: none;
 -o-user-select: none;
 }
 
+html, body {
+    height: 100%;
+}
+
+
+
 .wrapper {
 	text-align: center;
 }
