@@ -102,14 +102,12 @@
     <button id="signOut" onclick="auth2.signOut()">Sign Out</button>
     <button id="disconnect" >Disconnect your Google account from this app</button>
 
-    <h2>User's profile information</h2>
     <div id="profile"></div>
 
-    <h2>User's friends that are visible to this app</h2>
     <div id="visiblePeople"></div>
 
-    <h2>Authentication Logs</h2>
     <pre id="authResult"></pre>
+
   </div>
   <div id="loaderror">
     This section will be hidden by jQuery. If you can see this message, you
@@ -127,7 +125,7 @@ var helper = (function() {
      *
      * @param {Object} authResult An Object which contains the access token and
      *   other authentication information.
-     */
+     
     onSignInCallback: function(authResult) {
       $('#authResult').html('Auth Result:<br/>');
       for (var field in authResult) {
@@ -152,7 +150,8 @@ var helper = (function() {
 
       console.log('authResult', authResult);
     },
-
+    */
+    
     /**
      * Calls the OAuth2 endpoint to disconnect the app for the user.
      */
@@ -180,7 +179,7 @@ var helper = (function() {
       });
     },
     */
-    
+
     /**
      * Gets and renders the currently signed in user's profile data.
      */
