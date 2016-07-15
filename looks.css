@@ -3,7 +3,7 @@ width: 100px;
 height:100px;
 position:absolute;
 left: calc(50% - 43px);
-top: 120%;
+top: 40%;/*will be 120%  */
 z-index: 5;
 user-select: none;
 -moz-user-select: none;
