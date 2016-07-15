@@ -1,10 +1,3 @@
-<script>
-    function okay() {
-        animateDiv();
-        //$('body').addClass('loaded');
-        //animateDiv();
-    }
-</script>
 <div onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
@@ -58,16 +51,15 @@
 </div>
 
 
-<!--
-<div id="loader-wrapper">
 
+<div id="loader-wrapper">
             <div id="loader"></div>
 
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
 
         </div>
--->
+
 
 
 
@@ -165,6 +157,8 @@ function animateDivStart() {
         time[i] = 0;
         speed[i] = Math.random()*150+50;
     }
+    $('body').addClass('loaded');
+    animateDiv();
 }
 
     </script>
