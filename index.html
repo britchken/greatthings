@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<div onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
+<div id="king" onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
@@ -192,23 +192,15 @@ var helper = (function() {
       }).then(function(res) {
         var profile = res.result;
         console.log(profile);
+
+        $("#king img").attr("src", profile.image.url);
+
         $('#profile').empty();
         $('#profile').append(
             $('<p><img src=\"' + profile.image.url + '\"></p>'));
         $('#profile').append(
             $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
             profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
-        if (profile.emails) {
-          $('#profile').append('<br/>Emails: ');
-          for (var i=0; i < profile.emails.length; i++){
-            $('#profile').append(profile.emails[i].value).append(' ');
-          }
-          $('#profile').append('<br/>');
-        }
-        if (profile.cover && profile.coverPhoto) {
-          $('#profile').append(
-              $('<p><img src=\"' + profile.cover.coverPhoto.url + '\"></p>'));
-        }
       }, function(err) {
         var error = err.result;
         $('#profile').empty();
