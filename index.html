@@ -125,13 +125,8 @@ var helper = (function() {
      *
      * @param {Object} authResult An Object which contains the access token and
      *   other authentication information.
-     
+     */
     onSignInCallback: function(authResult) {
-      $('#authResult').html('Auth Result:<br/>');
-      for (var field in authResult) {
-        $('#authResult').append(' ' + field + ': ' +
-            authResult[field] + '<br/>');
-      }
       if (authResult.isSignedIn.get()) {
         $('#authOps').show('slow');
         $('#gConnect').hide();
@@ -150,8 +145,7 @@ var helper = (function() {
 
       console.log('authResult', authResult);
     },
-    */
-    
+
     /**
      * Calls the OAuth2 endpoint to disconnect the app for the user.
      */
