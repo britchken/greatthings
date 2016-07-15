@@ -57,7 +57,7 @@ body {
 /*variable speed, opacity, and position of clouds for realistic effect*/
 .x2 {
   left: 200px;
-  top: 20%;
+  top: 60%;
   -webkit-transform: scale(0.8);
   -moz-transform: scale(0.8);
   transform: scale(0.8);
