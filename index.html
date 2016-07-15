@@ -77,7 +77,6 @@
 
 
 <link rel="stylesheet" type="text/css" href="looks.css">
-<script type="text/javascript" src="move.js"></script>
 <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="jquery-css-transform.js"></script>
 <script type="text/javascript" src="jquery-animate-css-rotate-scale.js"></script>    
@@ -191,13 +190,16 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
+
         $('#profile').empty();
+
         $('#profile').append(
             $('<p><img src=\"' + profile.image.url + '\"></p>'));
+
         $('#profile').append(
             $('<p>Hello ' + profile.displayName + '!<br />Tagline: ' +
             profile.tagline + '<br />About: ' + profile.aboutMe + '</p>'));
-          $('#profile').append('<br/>');
+
         }
       }, function(err) {
         var error = err.result;
@@ -213,7 +215,6 @@ var helper = (function() {
 $(document).ready(function() {
   $('#disconnect').click(helper.disconnect);
   $('#loaderror').hide();
-  //animateDivStart();
   if ($('meta')[0].content == 'YOUR_CLIENT_ID') {
     alert('This sample requires your OAuth credentials (client ID) ' +
         'from the Google APIs console:\n' +
