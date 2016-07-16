@@ -177,7 +177,7 @@ var helper = (function() {
             people.totalItems + '<br/>');
         
         $('.innerjell').each(function(index, innerjell) {
-          $(innerjell).attr("background-image", people.items[index].image.url);
+          $(innerjell).attr("background", people.items[index].image.url);
         });
       });
     },
