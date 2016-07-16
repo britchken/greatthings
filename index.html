@@ -168,7 +168,7 @@ var helper = (function() {
             people.totalItems + '<br/>');
         
         $('.jell').each(function(index, jell) {
-          $(jell + " img").attr("src", people.items[index].image.url);
+          $(jell).attr("img src", people.items[index].image.url);
         });
         
         for (var personIndex in people.items) {
