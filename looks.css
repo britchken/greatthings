@@ -12,13 +12,13 @@ user-select: none;
 -o-user-select: none;
 }
 
-div.innerjell{
+img.innerjell{
   top: 30%;
   width: 500px;
   height: 500px;
   position: absolute;
   z-index: 100;
-  background-repeat: repeat-x;
+  src: "back.png";
 }
 
 html, body {
