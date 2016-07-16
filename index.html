@@ -166,13 +166,13 @@ var helper = (function() {
         $('#visiblePeople').empty();
         $('#visiblePeople').append('Number of people visible to this app: ' +
             people.totalItems + '<br/>');
-        var nowMe = 0;
-        $('.jell').each(function(index, jell){
-          
-        $(jell).attr("src", people.items[nowMe]);
-        nowMe = nowMe + 1;
-        
-    });
+
+        $('.jell').each(function(index, jell) {
+          if(index < people.totalItems) {
+            $(jell).attr("src", people.items[index]);
+          }
+        });
+
         for (var personIndex in people.items) {
           person = people.items[personIndex];
           $('#visiblePeople').append('<img src="' + person.image.url + '">');
