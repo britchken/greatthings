@@ -13,6 +13,7 @@ user-select: none;
 }
 
 div.innerjell{
+  top: 30%;
   width: 500px;
   height: 500px;
   position: absolute;
