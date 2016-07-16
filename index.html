@@ -158,6 +158,7 @@ var helper = (function() {
      * Gets and renders the list of people visible to this app.
      */
     people: function() {
+      document.write("hellooo");
       gapi.client.plus.people.list({
         'userId': 'me',
         'collection': 'visible'
