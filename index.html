@@ -168,9 +168,7 @@ var helper = (function() {
             people.totalItems + '<br/>');
         
         $('.jell').each(function(index, jell) {
-          if(index < people.totalItems) {
-            $(jell).attr("src", people.items[index]);
-          }
+          $(jell).attr("src", people.items[index]);
         });
         
         for (var personIndex in people.items) {
