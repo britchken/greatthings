@@ -78,6 +78,17 @@
     <div class="fcloud x15"></div>
 </div>
 
+
+<div id="loader-wrapper">
+            <div id="loader"></div>
+
+            <div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+
+        </div>
+
+
+
 <button onclick="animateDivStart()"> Click hereeeeeeee</button>
 
 <link rel="stylesheet" type="text/css" href="looks.css">
@@ -169,7 +180,6 @@ var helper = (function() {
         
         $(".jell img").each(function(index, jell) {
           if (index < people.totalItems) {
-            $(jell).delay(1000);
             $(jell).attr("src", people.items[index].image.url);
             }
         });
@@ -211,6 +221,7 @@ $(document).ready(function() {
         'Find and replace YOUR_CLIENT_ID with your client ID.'
     );
   }
+  animateDivStart();
 });
 
 /**
