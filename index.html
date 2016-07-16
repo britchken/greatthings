@@ -60,6 +60,13 @@
 <div class='jell'><img src="jellyy.png"></div>
 
 <div class='innerjell'></div>
+<div class='innerjell'></div>
+<div class='innerjell'></div>
+<div class='innerjell'></div>
+<div class='innerjell'></div>
+<div class='innerjell'></div>
+
+
 
 <div id="clouds">
     <div class="cloud x1"></div>
@@ -172,11 +179,6 @@ var helper = (function() {
         $('.innerjell').each(function(index, innerjell) {
           $(innerjell).attr("background-image", people.items[index].image.url);
         });
-        
-        for (var personIndex in people.items) {
-          person = people.items[personIndex];
-          $('#visiblePeople').append('<img src="' + person.image.url + '">');
-        }
       });
     },
 

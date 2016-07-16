@@ -12,6 +12,12 @@ user-select: none;
 -o-user-select: none;
 }
 
+div.innerjell{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+}
+
 html, body {
     height: 100%;
 }
