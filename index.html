@@ -131,7 +131,7 @@ var helper = (function() {
         $('#authOps').show('slow');
         $('#gConnect').hide();
         helper.profile();
-        //helper.people();
+        helper.people();
       } else {
           if (authResult['error'] || authResult.currentUser.get().getAuthResponse() == null) {
             // There was an error, which means the user is not signed in.
@@ -158,7 +158,6 @@ var helper = (function() {
      * Gets and renders the list of people visible to this app.
      */
     people: function() {
-      document.write("hellooo");
       gapi.client.plus.people.list({
         'userId': 'me',
         'collection': 'visible'
