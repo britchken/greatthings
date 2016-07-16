@@ -88,9 +88,6 @@
         </div>
 
 
-
-<button onclick="animateDivStart()"> Click hereeeeeeee</button>
-
 <link rel="stylesheet" type="text/css" href="looks.css">
 <script type="text/javascript" src="jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="jquery-css-transform.js"></script>
@@ -114,7 +111,6 @@
   </div>
   <div id="authOps" style="display:none">
     <button id="signOut" onclick="auth2.signOut()">Sign Out</button>
-    <button id="disconnect" >Disconnect your Google account from this app</button>
 
     <div id="profile"></div>
 
@@ -155,14 +151,6 @@ var helper = (function() {
           $('#authOps').hide('slow');
           $('#gConnect').show();
       }
-    },
-
-    /**
-     * Calls the OAuth2 endpoint to disconnect the app for the user.
-     */
-    disconnect: function() {
-      // Revoke the access token.
-      auth2.disconnect();
     },
 
     /**
@@ -212,7 +200,6 @@ var helper = (function() {
  * jQuery initialization
  */
 $(document).ready(function() {
-  $('#disconnect').click(helper.disconnect);
   $('#loaderror').hide();
   if ($('meta')[0].content == 'YOUR_CLIENT_ID') {
     alert('This sample requires your OAuth credentials (client ID) ' +
