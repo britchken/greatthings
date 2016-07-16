@@ -16,6 +16,7 @@ div.innerjell{
   width: 500px;
   height: 500px;
   position: absolute;
+  z-index: 10;
 }
 
 html, body {
