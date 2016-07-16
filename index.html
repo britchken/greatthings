@@ -168,7 +168,8 @@ var helper = (function() {
             people.totalItems + '<br/>');
         
         $(".jell img").each(function(index, jell) {
-          if (index < 4) {
+          if (index < people.totalItems) {
+            $(jell).delay(1000);
             $(jell).attr("src", people.items[index].image.url);
             }
         });
