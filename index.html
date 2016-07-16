@@ -24,7 +24,12 @@
 <html>
 <head>
 <div id="king" onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
+<div class='jell'>
+  <img src="jellyy.png">
+  <div class='innerjell'>
+    <img src="jellyy.png">
+  </div>
+</div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
@@ -59,12 +64,6 @@
 <div class='jell'><img src="jellyy.png"></div>
 <div class='jell'><img src="jellyy.png"></div>
 
-<img class='innerjell'></img>
-<img class='innerjell'></img>
-<img class='innerjell'></img>
-<img class='innerjell'></img>
-<img class='innerjell'></img>
-<img class='innerjell'></img>
 
 
 
@@ -176,7 +175,7 @@ var helper = (function() {
         $(".jell img").each(function(index, jell) {
           $(jell).attr("src", people.items[index].image.url);
         });
-        
+
       });
     },
 
