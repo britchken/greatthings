@@ -172,7 +172,7 @@ var helper = (function() {
         $(".innerText").each(function(index, txt) {
           if (index < 10) {
             var str = people.items[index].displayName;
-            str = str.split("\n")[0];
+            str = str.split(" ")[0];
             $(txt).append(str);
             }
         });
