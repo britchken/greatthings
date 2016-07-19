@@ -171,7 +171,7 @@ var helper = (function() {
 
         $(".innerText").each(function(index, txt) {
           if (index < 10) {
-            $(txt).append(people.items[index].displayName);
+            $(txt).append(people.items[index].name.givenName);
             }
         });
       });
