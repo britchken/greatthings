@@ -10,20 +10,38 @@ user-select: none;
 -khtml-user-select: none;
 -webkit-user-select: none;
 -o-user-select: none;
-}
-
-div.jell img{
-  z-index: 5;
-}
-
-
-html * {
-  font-family: yypp;
+font-family: yypp;
   color: #3CB371;
   font-size: 120%;
 }
 
+div.jellKing{
+width: 120px;
+height:100px;
+position:absolute;
+left: calc(50% - 43px);
+top: 120%;
+z-index: 30;
+user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+-o-user-select: none;
+font-family: yypp;
+  color: #FFD700;
+  font-size: 140%;
+}
+
 div.snooze img {
+  position:absolute;
+  top: 6px;
+  left: 12px;
+  height: 48px;
+  width: 74px;
+  z-index: 4;
+}
+
+div.snoozeKing img {
   position:absolute;
   top: 6px;
   left: 12px;

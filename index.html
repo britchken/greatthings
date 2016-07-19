@@ -33,7 +33,7 @@
   <img src="seaweed2.png"></img>
 </div>
 
-<div id="king" onclick="clickMe()" class='jell'>
+<div id="king" onclick="clickMe()" class='jellKing'>
   <div class='innerKingText'></div>
   <img src="jellyy.png">
   <div class='snoozeKing'>
@@ -240,9 +240,6 @@ var helper = (function() {
       }).then(function(res) {
         var profile = res.result;
         console.log(profile);
-
-        $("#king img").attr("src", profile.image.url);
-
       }, function(err) {
         var error = err.result;
         $('#profile').empty();
