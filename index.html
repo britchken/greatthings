@@ -32,42 +32,43 @@
 <div class='front'>
   <img src="seaweed2.png"></img>
 </div>
+
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
 -->
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="normal.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="normal.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="normal.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="normal.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="normal.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
 <div class='jell'><img src="normal.png"></div>
 <div class='jell'><img src="normal.png"></div>
 <div class='jell'><img src="normal.png"></div>
@@ -282,12 +283,14 @@ function startApp() {
       gapi.signin2.render('signin-button', {
           scope: 'https://www.googleapis.com/auth/plus.login',
           fetch_basic_profile: false });
+          console.log("ekekek");
       gapi.auth2.init({fetch_basic_profile: false,
           scope:'https://www.googleapis.com/auth/plus.login'}).then(
             function (){
               auth2 = gapi.auth2.getAuthInstance();
               auth2.isSignedIn.listen(updateSignIn);
               auth2.then(updateSignIn);
+              console.log("okokok");
             });
     });
   });
