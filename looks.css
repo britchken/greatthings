@@ -14,13 +14,16 @@ user-select: none;
 
 html * {
   font-family: yypp;
-  color: #FFF8DC;
-  font-size: 150%;
+  color: #90EE90;
+  font-size: 120%;
 }
 
 div.snooze img {
   position:absolute;
-  top: 50px;
+  top: -50px;
+  left: 10px;
+  height: 50px;
+  width: 50px;
 }
 
 div.back img {
