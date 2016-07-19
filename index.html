@@ -210,7 +210,7 @@ var helper = (function() {
       }).then(function(res) {
         var people = res.result;
 
-        $(".snoozeKing img").attr("src", me.image.url);
+        
 
         $(".snooze img").each(function(index, jell) {
           if (index < 4) {
@@ -224,7 +224,7 @@ var helper = (function() {
             }
         });
 
-        $(".innerKingText").append("King Jelly!");
+        
 
       });
     },
@@ -239,7 +239,10 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
-        console.log(profile);
+        
+        $(".innerKingText").append("Jelly Master");
+        $(".snoozeKing img").attr("src", profile.image.url);
+
       }, function(err) {
         var error = err.result;
         $('#profile').empty();
