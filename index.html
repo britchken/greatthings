@@ -220,18 +220,15 @@ var helper = (function() {
 
         $(".innerText").each(function(index, txt) {
           if (index < 4) {
-            $(txt).append("timeout");
+            $(txt).append(people.items[index].name.formatted);
             }
         });
-
-        
-
       });
     },
 
     /**
 
-    people.items[index].name.formatted
+    
      * Gets and renders the currently signed in user's profile data.
      */
     profile: function(){
@@ -239,7 +236,7 @@ var helper = (function() {
         'userId': 'me'
       }).then(function(res) {
         var profile = res.result;
-        
+
         $(".innerKingText").append("Jelly Master");
         $(".snoozeKing img").attr("src", profile.image.url);
 
