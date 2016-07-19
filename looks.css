@@ -12,6 +12,11 @@ user-select: none;
 -o-user-select: none;
 }
 
+div.jell img{
+  z-index: 5;
+}
+
+
 html * {
   font-family: yypp;
   color: #3CB371;
@@ -22,7 +27,7 @@ div.snooze img {
   position:absolute;
   top: 5px;
   left: 15px;
-  height: 60px;
+  height: 54px;
   width: 70px;
   z-index: 4;
 }
