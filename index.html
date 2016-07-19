@@ -24,7 +24,7 @@
 <html>
 <head>
 <div id="king" onclick="clickMe()" class='jell'><img src="normal.png"></div>
-<!--
+
 <div class='back'>
   <img src="seaweed1.png"></img>
 </div>
@@ -35,40 +35,39 @@
 
 <div class='jell'>
   <div class='innerText'></div>
-  <img src="normal.png">
+  <img src="jellyy.png">
   <div class='snooze'>
     <img src="hs.jpg"></img>
   </div>
 </div>
 <div class='jell'>
   <div class='innerText'></div>
-  <img src="normal.png">
+  <img src="jellyy.png">
   <div class='snooze'>
     <img src="hs.jpg"></img>
   </div>
 </div>
 <div class='jell'>
   <div class='innerText'></div>
-  <img src="normal.png">
+  <img src="jellyy.png">
   <div class='snooze'>
     <img src="hs.jpg"></img>
   </div>
 </div>
 <div class='jell'>
   <div class='innerText'></div>
-  <img src="normal.png">
+  <img src="jellyy.png">
   <div class='snooze'>
     <img src="hs.jpg"></img>
   </div>
 </div>
 <div class='jell'>
   <div class='innerText'></div>
-  <img src="normal.png">
+  <img src="jellyy.png">
   <div class='snooze'>
     <img src="hs.jpg"></img>
   </div>
 </div>
--->
 <div class='jell'><img src="normal.png"></div>
 <div class='jell'><img src="normal.png"></div>
 <div class='jell'><img src="normal.png"></div>
@@ -207,18 +206,18 @@ var helper = (function() {
         $('#visiblePeople').append('Number of people visible to this app: ' +
             people.totalItems + '<br/>');
         
-        $(".jell img").each(function(index, jell) {
-          if (index < people.totalItems) {
+        $(".snooze img").each(function(index, jell) {
+          if (index < 4) {
             $(jell).attr("src", people.items[index].image.url);
             }
         });
-        /*
+
         $(".innerText").each(function(index, txt) {
-          if (index < 2) {
+          if (index < 4) {
             $(txt).append("sooo");
             }
         });
-        */
+
       });
     },
 
@@ -283,14 +282,12 @@ function startApp() {
       gapi.signin2.render('signin-button', {
           scope: 'https://www.googleapis.com/auth/plus.login',
           fetch_basic_profile: false });
-          console.log("ekekek");
       gapi.auth2.init({fetch_basic_profile: false,
           scope:'https://www.googleapis.com/auth/plus.login'}).then(
             function (){
               auth2 = gapi.auth2.getAuthInstance();
               auth2.isSignedIn.listen(updateSignIn);
               auth2.then(updateSignIn);
-              console.log("okokok");
             });
     });
   });
