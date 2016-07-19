@@ -33,6 +33,7 @@
   <img src="seaweed2.png"></img>
 </div>
 
+<!--
 <div id="king" onclick="clickMe()" class='jell'>
   <div class='innerKingText'></div>
   <img src="jellyy.png">
@@ -40,6 +41,7 @@
     <img src="hs.jpg"></img>
   </div>
 </div>
+-->
 
 <div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
 <div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
@@ -208,7 +210,7 @@ var helper = (function() {
       }).then(function(res) {
         var profile = res.result;
 
-        $(".innerKingText").append("Jelly Master");
+        //$(".innerKingText").append("Jelly Master");
         //$(".snoozeKing img").attr("src", profile.image.url);
 
       }, function(err) {
