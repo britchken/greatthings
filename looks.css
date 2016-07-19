@@ -1,5 +1,5 @@
 div.jell{
-width: 100px;
+width: 120px;
 height:100px;
 position:absolute;
 left: calc(50% - 43px);
@@ -10,6 +10,37 @@ user-select: none;
 -khtml-user-select: none;
 -webkit-user-select: none;
 -o-user-select: none;
+font-family: yypp;
+color: #FFF8DC;
+font-size: 150%;
+}
+
+div.snooze img {
+  position:absolute;
+  top: 50px;
+}
+
+div.back img {
+  position:absolute;
+  top: 54%;
+  height: 50%;
+  left: 0;
+  width: 100%;
+  z-index:0;
+}
+
+div.front img {
+  position:absolute;
+  top: 56%;
+  height: 50%;
+  left: 0;
+  width: 100%;
+  z-index:10;
+}
+
+@font-face {
+  font-family: yypp;
+  src: url(blow.ttf);
 }
 
 div.innerjell{

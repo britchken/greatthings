@@ -23,41 +23,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-<div id="king" onclick="clickMe()" class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
-<div class='jell'><img src="jellyy.png"></div>
+<div id="king" onclick="clickMe()" class='jell'><img src="normal.png"></div>
+
+<div class='back'>
+  <img src="seaweed1.png"></img>
+</div>
+
+<div class='front'>
+  <img src="seaweed2.png"></img>
+</div>
+
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'>
+  <div class='innerText'></div>
+  <img src="normal.png">
+  <div class='snooze'>
+    <img src="hs.jpg"></img>
+  </div>
+</div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
+<div class='jell'><img src="normal.png"></div>
 
 
 
@@ -169,6 +208,12 @@ var helper = (function() {
         $(".jell img").each(function(index, jell) {
           if (index < people.totalItems) {
             $(jell).attr("src", people.items[index].image.url);
+            }
+        });
+
+        $(".innerText").each(function(index, txt) {
+          if (index < people.totalItems) {
+            $(txt).append(people.items[index].name);
             }
         });
 
