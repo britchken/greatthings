@@ -34,7 +34,7 @@ font-family: yypp;
 }
 
 div.snooze img {
-  position:absolute;
+  position:fixed;
   top: 36px;
   left: 12px;
   height: 48px;
@@ -43,7 +43,7 @@ div.snooze img {
 }
 
 div.snoozeKing img {
-  position:absolute;
+  position:fixed;
   top: 6px;
   left: 12px;
   height: 48px;
