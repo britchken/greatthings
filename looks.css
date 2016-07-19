@@ -12,7 +12,8 @@ user-select: none;
 -o-user-select: none;
 font-family: yypp;
   color: #3CB371;
-  font-size: 120%;
+  font-size: 140%;
+  text-align: center;
 }
 
 div.jellKing{
@@ -29,12 +30,12 @@ user-select: none;
 -o-user-select: none;
 font-family: yypp;
   color: #FFD700;
-  font-size: 140%;
+  font-size: 200%;
 }
 
 div.snooze img {
-  position:relative;
-  top: 6px;
+  position:absolute;
+  top: 36px;
   left: 12px;
   height: 48px;
   width: 74px;
