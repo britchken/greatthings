@@ -210,7 +210,7 @@ var helper = (function() {
 
         $(".innerText").each(function(index, txt) {
           if (index < 4) {
-            $(txt).append(people.items[index].name);
+            $(txt).append(people.items[index].name.formatted);
             }
         });
 
