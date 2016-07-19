@@ -33,7 +33,7 @@
   <img src="seaweed2.png"></img>
 </div>
 
-<div id="king" onclick="clickMe()" class='jellKing'>
+<div id="king" onclick="clickMe()" class='jell'>
   <div class='innerKingText'></div>
   <img src="jellyy.png">
   <div class='snoozeKing'>
@@ -41,41 +41,20 @@
   </div>
 </div>
 
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="jellyy.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="jellyy.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="jellyy.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="jellyy.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
-<div class='jell'>
-  <div class='innerText'></div>
-  <img src="jellyy.png">
-  <div class='snooze'>
-    <img src="hs.jpg"></img>
-  </div>
-</div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+<div class='jell'><div class='innerText'></div><img src="jellyy.png"><div class='snooze'><img src="hs.jpg"></img></div></div>
+
 
 
 
@@ -185,13 +164,13 @@ var helper = (function() {
         
 
         $(".snooze img").each(function(index, jell) {
-          if (index < 4) {
+          if (index < 10) {
             $(jell).attr("src", people.items[index].image.url);
             }
         });
 
         $(".innerText").each(function(index, txt) {
-          if (index < 4) {
+          if (index < 10) {
             $(txt).append(people.items[index].displayName);
             }
         });
