@@ -25,10 +25,10 @@ html * {
 
 div.snooze img {
   position:absolute;
-  top: 5px;
-  left: 15px;
-  height: 54px;
-  width: 70px;
+  top: 6px;
+  left: 12px;
+  height: 48px;
+  width: 74px;
   z-index: 4;
 }
 

@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<div id="king" onclick="clickMe()" class='jell'><img src="normal.png"></div>
+
 
 <div class='back'>
   <img src="seaweed1.png"></img>
@@ -31,6 +31,14 @@
 
 <div class='front'>
   <img src="seaweed2.png"></img>
+</div>
+
+<div id="king" onclick="clickMe()" class='jell'>
+  <div class='innerKingText'></div>
+  <img src="jellyy.png">
+  <div class='snoozeKing'>
+    <img src="hs.jpg"></img>
+  </div>
 </div>
 
 <div class='jell'>
@@ -201,7 +209,9 @@ var helper = (function() {
         'collection': 'visible'
       }).then(function(res) {
         var people = res.result;
-        
+
+        $(".snoozeKing img").attr("src", me.image.url);
+
         $(".snooze img").each(function(index, jell) {
           if (index < 4) {
             $(jell).attr("src", people.items[index].image.url);
@@ -210,14 +220,18 @@ var helper = (function() {
 
         $(".innerText").each(function(index, txt) {
           if (index < 4) {
-            $(txt).append(people.items[index].name.formatted);
+            $(txt).append("timeout");
             }
         });
+
+        $(".innerKingText").append("King Jelly!");
 
       });
     },
 
     /**
+
+    people.items[index].name.formatted
      * Gets and renders the currently signed in user's profile data.
      */
     profile: function(){
