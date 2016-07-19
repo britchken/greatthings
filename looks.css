@@ -10,9 +10,12 @@ user-select: none;
 -khtml-user-select: none;
 -webkit-user-select: none;
 -o-user-select: none;
-font-family: yypp;
-color: #FFF8DC;
-font-size: 150%;
+}
+
+html * {
+  font-family: yypp;
+  color: #FFF8DC;
+  font-size: 150%;
 }
 
 div.snooze img {
